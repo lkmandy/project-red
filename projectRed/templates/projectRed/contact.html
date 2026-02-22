@@ -1,0 +1,70 @@
+{% extends "projectRed/base.html" %} 
+{% load static %} 
+
+{% block title %}
+Project Red – Contact
+{% endblock %} 
+
+{% block content %}
+<section class="page-section">
+  <div class="container py-5">
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <h1 class="page-title">Contact</h1>
+        <p>
+          Have questions about the November Project Red campaign, donations, or
+          student support? Reach out using the details below.
+        </p>
+
+        <div class="contact-card">
+          <h2 class="section-title">Campaign Contact</h2>
+          <p class="mb-1"><strong>Email:</strong> projectred@example.com</p>
+          <p class="mb-1">
+            <strong>Location:</strong> Assiniboine College, Brandon, MB
+          </p>
+          <p class="mb-0">
+            <strong>Best time:</strong> Weekdays in November, 9:00am – 4:00pm
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="section-title">Send us a message</h2>
+        <form class="contact-form" action="#" method="post">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              class="form-control"
+              placeholder="First and last name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="form-control"
+              placeholder="Tell us how you’d like to help or what support you need."
+            ></textarea>
+          </div>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

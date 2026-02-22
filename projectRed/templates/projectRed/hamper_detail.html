@@ -1,0 +1,50 @@
+<!-- Displays detailed information for one hamper request -->
+
+{% extends "projectRed/base.html" %}
+
+{% block title %}
+  Project Red – Hamper for {{ hamper.student_name }}
+{% endblock %}
+
+{% block content %}
+<section class="page-section">
+  <div class="container py-4">
+    <h1 class="page-title mb-4">Hamper for {{ hamper.student_name }}</h1>
+
+    <dl class="row">
+      <dt class="col-sm-3">Student</dt>
+      <dd class="col-sm-9">{{ hamper.student_name }}</dd>
+
+      <dt class="col-sm-3">Family Size</dt>
+      <dd class="col-sm-9">{{ hamper.family_size }}</dd>
+
+      <dt class="col-sm-3">Priority</dt>
+      <dd class="col-sm-9">{{ hamper.get_priority_display }}</dd>
+
+      <dt class="col-sm-3">Comments</dt>
+      <dd class="col-sm-9">
+        {% if hamper.comments %}
+          {{ hamper.comments }}
+        {% else %}
+          <em>No comments provided.</em>
+        {% endif %}
+      </dd>
+
+      <dt class="col-sm-3">Created</dt>
+      <dd class="col-sm-9">{{ hamper.created_at|date:"Y-m-d H:i" }}</dd>
+    </dl>
+
+    <div class="mt-4 d-flex flex-wrap gap-2">
+      <a href="{% url 'hamper_update' hamper.pk %}" class="btn btn-primary">
+        Edit
+      </a>
+      <a href="{% url 'hamper_delete' hamper.pk %}" class="btn btn-outline-danger">
+        Delete
+      </a>
+      <a href="{% url 'hamper_list' %}" class="btn btn-link">
+        Back to list
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

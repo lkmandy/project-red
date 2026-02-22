@@ -1,0 +1,90 @@
+{% extends "projectRed/base.html" %} 
+{% load static %} 
+
+{% block title %}
+Project Red – Home
+{% endblock %} 
+
+{% block content %}
+<section class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="pe-lg-3">
+          <h1 class="display-3 fw-bold mb-4">
+            Help Support Students This
+            <span class="text-primary">Christmas</span>
+          </h1>
+          <p class="lead mb-4">
+            Give the gift of a full table this holiday season. A simple act of
+            generosity can bring comfort, warmth, and hope to a student or
+            family facing a difficult winter.
+          </p>
+        </div>
+        <div class="d-grid d-sm-flex">
+          <a
+            class="btn btn-lg btn-primary me-2 mb-3 mb-sm-0"
+            href="{% url 'contact' %}">Get Started </a>
+          <a class="btn btn-lg btn-outline-primary" href="{% url 'about' %}"> Learn More</a>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex">
+        <div class="hero-image-wrapper w-100">
+          <img
+            alt="Project Red hero"
+            src="{% static 'projectRed/img/hero-image.jpg' %}"
+            class="hero-image"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <h2 class="display-5 fw-bold">50k+</h2>
+        <p>Happy students impacted obver the years</p>
+      </div>
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <h2 class="display-5 fw-bold">10...</h2>
+        <p>Years serving the Brandon student community</p>
+      </div>
+      <div class="col-sm-4">
+        <h2 class="display-5 fw-bold">5+</h2>
+        <p>Community awards received</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info-section">
+  <div class="container py-5">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h2 class="section-title">Why November?</h2>
+        <p>
+          November is a busy month on campus: classes are in full swing, days
+          are shorter, and many students are starting to worry about holiday
+          costs. Project Red runs in November so support can reach families
+          <strong>before</strong> the winter break.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2 class="section-title">Who we support</h2>
+        <p>
+          Project Red focuses on Assiniboine students and their households.
+          Support can look like a holiday food hamper for local students, or
+          grocery gift cards for students who study remotely or can’t easily get
+          to campus.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2 class="section-title">How you can help</h2>
+        <p>
+          Students, staff, and community members can join the November campaign
+          by spreading the word, organizing mini-drives, or asking how to donate
+          non-perishable items and gift cards.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

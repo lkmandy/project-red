@@ -1,0 +1,90 @@
+<!-- Base template used by all pages to keep layout consistent -->
+<!-- Contains header, navigation, footer, and shared styles -->
+ 
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="description" content="Project Red is a November giving campaign that supports Assiniboine students and their families with holiday hampers and grocery gift cards.">
+
+  <link rel="shortcut icon" href="{% static 'projectRed/img/favicon.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'projectRed/css/site.css' %}">
+
+  <title>
+    {% block title %}
+      Project Red – {{ page_title|default:"November Giving Campaign" }}
+    {% endblock %}
+  </title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container d-flex flex-column flex-md-row align-items-md-center justify-content-between py-3">
+
+      <a class="brand d-flex align-items-center gap-2 text-decoration-none" href="{% url 'home' %}">
+        <img src="{% static 'projectRed/img/project_red_banner.png' %}"
+             class="brand-logo"
+             alt="Project Red banner logo">
+      </a>
+
+      <!-- Navbar + Hello Badge Inline -->
+      <div class="d-flex align-items-center gap-3 mt-3 mt-md-0">
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link{% if request.resolver_match.url_name == 'home' %} active{% endif %}"
+                 href="{% url 'home' %}">
+                Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link{% if request.resolver_match.url_name == 'hamper_list' %} active{% endif %}"
+                 href="{% url 'hamper_list' %}">
+                Hamper Requests
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link{% if request.resolver_match.url_name == 'about' %} active{% endif %}"
+                 href="{% url 'about' %}">
+                About
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link{% if request.resolver_match.url_name == 'contact' %} active{% endif %}"
+                 href="{% url 'contact' %}">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Hello Guest Badge -->
+        <span class="px-3 py-1 bg-white text-danger fw-bold rounded-pill shadow-sm">
+          Hello {{ username|default:"Guest" }}.
+        </span>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center py-3">
+      <p class="mb-0">&copy; {% now "Y" %} Project Red Inc</p>
+    </div>
+  </footer>
+
+</body>
+</html>

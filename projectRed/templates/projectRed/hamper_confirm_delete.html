@@ -1,0 +1,31 @@
+<!-- Confirmation page to prevent accidental deletions -->
+
+{% extends "projectRed/base.html" %}
+
+{% block title %}
+  Project Red – Delete Hamper for {{ hamper.student_name }}
+{% endblock %}
+
+{% block content %}
+<section class="page-section">
+  <div class="container py-4">
+    <h1 class="page-title text-danger mb-3">Delete Hamper Request</h1>
+    <p>
+      Are you sure you want to delete the hamper request for
+      <strong>{{ hamper.student_name }}</strong>?
+    </p>
+
+    <form method="post" class="mt-3">
+      {% csrf_token %}
+      <div class="d-flex flex-wrap gap-2">
+        <button type="submit" class="btn btn-danger">
+          Yes, delete
+        </button>
+        <a href="{% url 'hamper_detail' hamper.pk %}" class="btn btn-outline-secondary">
+          Cancel
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

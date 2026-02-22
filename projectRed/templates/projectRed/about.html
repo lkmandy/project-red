@@ -1,0 +1,64 @@
+{% extends "projectRed/base.html" %} 
+{% load static %} 
+
+{% block title %}
+Project
+Red – About
+{% endblock %} {% block content %}
+<section class="page-section">
+  <div class="container py-5">
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <h1 class="page-title">About Project Red</h1>
+        <p>
+          Project Red is a meaningful November giving campaign created to
+          support Assiniboine students and their families during one of the most
+          demanding times of the year.
+        </p>
+        <p>
+          As the holiday season approaches, so do new pressures, shorter days,
+          colder weather, rising living costs, and the final stretch of the
+          academic semester. Many students are juggling schoolwork, part-time
+          jobs, childcare responsibilities, and financial stress all at once.
+          What should be a warm and joyful season can quickly become
+          overwhelming. Project Red exists to ensure that no student at
+          Assiniboine feels forgotten, left out, or alone during the holidays.
+        </p>
+
+        <p>
+          Whether a student is attending classes on campus in Brandon or
+          studying remotely from a distance, the goal is the same: to bring
+          comfort, nourishment, and a sense of belonging when it’s needed most.
+        </p>
+        <p>
+          During November, we collect donations and coordinate support so that
+          students and their families can receive either:
+        </p>
+        <ul>
+          <li>Holiday food hampers for students who live near campus.</li>
+          <li>Grocery gift cards for remote or distance learners.</li>
+        </ul>
+      </div>
+      <div class="col-md-6 text-center">
+        <img
+          src="{% static 'projectRed/img/about-red.png' %}"
+          class="img-fluid rounded shadow-sm about-image"
+          alt="Students and community coming together for a November food drive"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section page-section-alt">
+  <div class="container py-4">
+    <h2 class="section-title">Why Project Red Matters</h2>
+    <ul>
+      <li>Students can enjoy a meaningful, nourishing holiday meal</li>
+      <li>Families have one less worry during an already busy time of year</li>
+      <li>Remote learners receive support no matter where they are</li>
+      <li>Community members have a chance to make a real difference</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
