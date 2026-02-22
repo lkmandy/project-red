@@ -1,0 +1,19 @@
+<type>(<scope>): <short summary>
+
+# ---------------------------------------------------------
+# Guidelines:
+# - feat: A new feature
+# - fix: A bug fix
+# - docs: Documentation changes
+# - refactor: Code change that neither fixes a bug nor adds a feature
+# - security: Vulnerability fix or security enhancement
+# ---------------------------------------------------------
+
+# Detailed Description:
+- 
+
+# Breaking Changes:
+BREAKING CHANGE: 
+
+# References:
+Fixes: #
