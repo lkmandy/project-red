@@ -1,9 +1,9 @@
-{% extends "projectRed/base.html" %} 
-{% load static %} 
+{% extends "projectRed/base.html" %}
+{% load static %}
 
 {% block title %}
 Project Red – Home
-{% endblock %} 
+{% endblock %}
 
 {% block content %}
 <section class="hero-section py-5">
@@ -22,19 +22,13 @@ Project Red – Home
           </p>
         </div>
         <div class="d-grid d-sm-flex">
-          <a
-            class="btn btn-lg btn-primary me-2 mb-3 mb-sm-0"
-            href="{% url 'contact' %}">Get Started </a>
+          <a class="btn btn-lg btn-primary me-2 mb-3 mb-sm-0" href="{% url 'contact' %}">Get Started </a>
           <a class="btn btn-lg btn-outline-primary" href="{% url 'about' %}"> Learn More</a>
         </div>
       </div>
       <div class="col-lg-6 d-flex">
         <div class="hero-image-wrapper w-100">
-          <img
-            alt="Project Red hero"
-            src="{% static 'projectRed/img/hero-image.jpg' %}"
-            class="hero-image"
-          />
+          <img alt="Project Red hero" src="{% static 'projectRed/img/hero-image.jpg' %}" class="hero-image" />
         </div>
       </div>
     </div>

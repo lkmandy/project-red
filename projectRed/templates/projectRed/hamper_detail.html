@@ -3,7 +3,7 @@
 {% extends "projectRed/base.html" %}
 
 {% block title %}
-  Project Red – Hamper for {{ hamper.student_name }}
+Project Red – Hamper for {{ hamper.student_name }}
 {% endblock %}
 
 {% block content %}
@@ -24,9 +24,9 @@
       <dt class="col-sm-3">Comments</dt>
       <dd class="col-sm-9">
         {% if hamper.comments %}
-          {{ hamper.comments }}
+        {{ hamper.comments }}
         {% else %}
-          <em>No comments provided.</em>
+        <em>No comments provided.</em>
         {% endif %}
       </dd>
 
